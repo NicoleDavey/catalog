@@ -1,4 +1,5 @@
-function changeHeading() {
+function changeHeading(ev) {
+  ev.preventDefault();
   let heading2 = document.querySelector('.changeMe');
   let heading1 = document.querySelector('h1');
   heading1.textContent = 'A Source for Cat Leaders around The World';
@@ -6,5 +7,6 @@ function changeHeading() {
 }
 
 let button = document.querySelector('button');
+let form = document.querySelector('form');
 
-button.addEventListener('click', changeHeading);
+form.addEventListener('submit', changeHeading);
