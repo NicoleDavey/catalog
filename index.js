@@ -1,9 +1,9 @@
 function changeHeading(ev) {
   ev.preventDefault();
-  let heading2 = document.querySelector('.changeMe');
+  let f = ev.target;
+  let catName = f.catName.value;
   let heading1 = document.querySelector('h1');
-  heading1.textContent = 'A Source for Cat Leaders around The World';
-  heading2.textContent = 'A Storied Tale of Prints';
+  heading1.textContent = catName;
 }
 
 let button = document.querySelector('button');
