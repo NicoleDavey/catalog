@@ -1,9 +1,10 @@
 function changeHeading(ev) {
   ev.preventDefault();
-  let f = ev.target;
-  let catName = f.catName.value;
+  let catForm = ev.target;
+  let catName = catForm.catName.value;
   let heading1 = document.querySelector('h1');
   heading1.textContent = catName;
+  catForm.reset();
 }
 
 let button = document.querySelector('button');
