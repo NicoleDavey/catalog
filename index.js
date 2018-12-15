@@ -7,10 +7,11 @@ function changeHeading(ev) {
   let catAge = catForm.catAge.value;
 
   // grab the list from the page
-  let catList = document.querySelector('div.catList');
+  let catList = document.querySelector('ul.catList');
 
   // add the values to the list
-  catList.innerHTML += '<p>' + catName + '</p>';
+  catList.innerHTML += `<li> ${catName}, ${catAge}`;
+  // catList.innerHTML += '<p>' + catName + ', ' + catAge + '</p>';
 
   // clear the form
   catForm.reset();
