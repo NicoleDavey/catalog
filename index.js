@@ -3,15 +3,19 @@ function changeHeading(ev) {
   let catForm = ev.target;
 
   // get the values from the form
-  let catName = catForm.catName.value;
-  let catAge = catForm.catAge.value;
-  let favoriteColor = catForm.favoriteColor.value;
+  let cat = {
+    name: catForm.catName.value,
+    age: catForm.catAge.value,
+    favoriteColor: catForm.favoriteColor.value,
+  };
 
   // grab the list from the page
   let catList = document.querySelector('ul.catList');
 
   // add the values to the list
-  catList.innerHTML += `<li style="color: ${favoriteColor}"> ${catName}, ${catAge}`;
+  catList.innerHTML += `<li style="color: ${cat.favoriteColor}"> ${cat.name}, ${
+    cat.age
+  }`;
   // catList.innerHTML += '<p>' + catName + ', ' + catAge + '</p>';
 
   // clear the form
