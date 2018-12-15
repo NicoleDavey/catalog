@@ -2,14 +2,17 @@ function changeHeading(ev) {
   ev.preventDefault();
   let catForm = ev.target;
 
+  // get the values from the form
   let catName = catForm.catName.value;
-  let heading1 = document.querySelector('h1');
-  heading1.textContent = catName;
-
   let catAge = catForm.catAge.value;
-  let ageHeading = document.querySelector('h2.age');
-  ageHeading.textContent = catAge;
 
+  // grab the list from the page
+  let catList = document.querySelector('div.catList');
+
+  // add the values to the list
+  catList.innerHTML += '<p>' + catName + '</p>';
+
+  // clear the form
   catForm.reset();
 }
 
