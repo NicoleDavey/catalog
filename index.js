@@ -1,4 +1,4 @@
-function changeHeading(ev) {
+function handleSubmit(ev) {
   ev.preventDefault();
   let catForm = ev.target;
 
@@ -10,6 +10,13 @@ function changeHeading(ev) {
     weight: catForm.weight.value,
   };
 
+  addCat(cat);
+
+  // clear the form
+  catForm.reset();
+}
+
+function addCat(cat) {
   // grab the list from the page
   let catList = document.querySelector('ul.catList');
 
@@ -21,12 +28,7 @@ function changeHeading(ev) {
   `;
 
   // catList.innerHTML += '<p>' + catName + ', ' + catAge + '</p>';
-
-  // clear the form
-  catForm.reset();
 }
 
-let button = document.querySelector('button');
-
 let form = document.querySelector('#catForm');
-form.addEventListener('submit', changeHeading);
+form.addEventListener('submit', handleSubmit);
